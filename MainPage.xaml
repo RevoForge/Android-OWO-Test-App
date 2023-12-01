@@ -1,0 +1,99 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://schemas.microsoft.com/dotnet/2021/maui/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             BackgroundColor="{DynamicResource PageBackgroundColor}"
+             x:Class="OWOAndroid.MainPage"
+             mc:Ignorable="d">
+
+    <StackLayout Margin="10">
+
+        <!-- Frame for the Start Button -->
+        <Frame CornerRadius="5" BorderColor="Black" HasShadow="True" Margin="0,0,0,10">
+            <Button x:Name="startButton" Text="Connect Suit" Clicked="StartButton_Clicked"/>
+        </Frame>
+
+        <!-- Grid with fixed-height row for ScrollView containing Label inside a Frame -->
+        <Frame Grid.Row="2" CornerRadius="5" BorderColor="Black" HasShadow="True" Margin="0,10,0,0">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="100" />
+                </Grid.RowDefinitions>
+
+                <ScrollView x:Name="scrollView" VerticalScrollBarVisibility="Always" Grid.Row="1">
+                    <Label x:Name="messageLabel" Text="" />
+                </ScrollView>
+            </Grid>
+        </Frame>
+        <Grid Grid.Row="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+
+            </Grid.ColumnDefinitions>
+            <!-- Intensity Button -->
+            <Label Text="Sensation Settings:" VerticalOptions="Center" />
+            <Entry Placeholder="Intensity" x:Name="integerEntryI" TextChanged="OnIntensityChanged" Grid.Row="1" Grid.Column="0" />
+            <!-- Duration Button -->
+            <Entry Placeholder="Duration" x:Name="integerEntryD" TextChanged="OnDurationChanged" Grid.Row="2" Grid.Column="0" />
+            <!-- Frequency Button -->
+            <Entry Placeholder="Frequency" x:Name="integerEntryF" TextChanged="OnFrequencyChanged" Grid.Row="3" Grid.Column="0" />
+            <!-- Ramp Up Button -->
+            <Entry Placeholder="Ramp Up" x:Name="integerEntryRU" TextChanged="OnRampUpChanged" Grid.Row="4" Grid.Column="0" />
+            <!-- Ramp Down Button -->
+            <Entry Placeholder="Ramp Down" x:Name="integerEntryRD" TextChanged="OnRampDownChanged" Grid.Row="5" Grid.Column="0" />
+
+            <!-- All Button -->
+            <Button Text="All" Clicked="All_Clicked" Grid.Row="0" Grid.Column="1"/>
+
+            <!-- Left Pectoral Button -->
+            <Button Text="Left Pectoral" Clicked="LeftPectoral_Clicked" Grid.Row="1" Grid.Column="1"/>
+
+            <!-- Right Pectoral Button -->
+            <Button Text="Right Pectoral" Clicked="RightPectoral_Clicked" Grid.Row="2" Grid.Column="1"/>
+
+            <!-- Left Arm Button -->
+            <Button Text="Left Arm" Clicked="LeftArm_Clicked" Grid.Row="3" Grid.Column="1"/>
+
+            <!-- Right Arm Button -->
+            <Button Text="Right Arm" Clicked="RightArm_Clicked" Grid.Row="4" Grid.Column="1"/>
+
+            <!-- Left Abdominal Button -->
+            <Button Text="Left Abdominal" Clicked="LeftAbdominal_Clicked" Grid.Row="5" Grid.Column="1"/>
+
+            <!-- Right Abdominal Button -->
+            <Button Text="Right Abdominal" Clicked="RightAbdominal_Clicked" Grid.Row="6" Grid.Column="1"/>
+
+            <!-- Left Dorsal Button -->
+            <Button Text="Left Dorsal" Clicked="LeftDorsal_Clicked" Grid.Row="7" Grid.Column="1"/>
+
+            <!-- Right Dorsal Button -->
+            <Button Text="Right Dorsal" Clicked="RightDorsal_Clicked" Grid.Row="8" Grid.Column="1"/>
+
+            <!-- Left Lumbar Button -->
+            <Button Text="Left Lumbar" Clicked="LeftLumbar_Clicked" Grid.Row="9" Grid.Column="1"/>
+
+            <!-- Right Lumbar Button -->
+            <Button Text="Right Lumbar" Clicked="RightLumbar_Clicked" Grid.Row="10" Grid.Column="1"/>
+
+
+        </Grid>
+
+
+    </StackLayout>
+
+</ContentPage>
